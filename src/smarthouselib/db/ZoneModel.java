@@ -86,51 +86,19 @@ public class ZoneModel implements IModel
     return this.name;
   }
 
-  private static ZoneModel fetchById(int id)
+  @Override
+  public boolean load(int id)
   {
     Connection _conn = Database.getInstance().getConnection();
     PreparedStatement stmt;
-    ZoneModel model = new ZoneModel();
+    boolean found = false;
     try
     {
       stmt = _conn.prepareStatement(sqlQueries[0]);
       stmt.setInt(1, id);
 
       ResultSet rs = stmt.executeQuery();
-      boolean found = false;
-      if (rs.next())
-      {
-        model.setId(rs.getInt(1));
-        model.setName(rs.getString(2));
-        model.setFloor(rs.getInt(3));
-        model.setChanged(false);
-        found = true;
-      }
-      rs.close();
-      stmt.close();
-      if (found)
-        return model;
 
-    } catch (SQLException ex)
-    {
-      ex.printStackTrace();
-    }
-    return null;
-  }
-
-  @Override
-  public boolean update()
-  {
-    Connection _conn = Database.getInstance().getConnection();
-    PreparedStatement stmt;
-
-    try
-    {
-      stmt = _conn.prepareStatement(sqlQueries[0]);
-      stmt.setInt(1, getId());
-
-      ResultSet rs = stmt.executeQuery();
-      boolean found = false;
       if (rs.next())
       {
         setId(rs.getInt(1));
@@ -142,13 +110,12 @@ public class ZoneModel implements IModel
       rs.close();
       stmt.close();
 
-      return found;
     } catch (SQLException ex)
     {
       ex.printStackTrace();
     }
 
-    return false;
+    return found;
   }
 
   @Override
@@ -157,53 +124,70 @@ public class ZoneModel implements IModel
     if (!this.isChanged())
       return true;
 
-    Connection _conn = Database.getInstance().getConnection();
-    PreparedStatement stmt;
+    if (this.getId() == 0)
+      return this.insert();
+    else
+      return this.update();
+  }
+
+  private boolean insert()
+  {
     try
     {
-      if (this.getId() == 0)
+      Connection _conn = Database.getInstance().getConnection();
+      PreparedStatement stmt;
+
+      stmt = _conn.prepareStatement(sqlQueries[1]); // insert
+      stmt.setInt(1, 0);
+      stmt.setString(2, this.getName());
+      stmt.setInt(3, this.getFloor());
+
+      int affectedRows = stmt.executeUpdate();
+
+      if (affectedRows == 1)
       {
-        stmt = _conn.prepareStatement(sqlQueries[1]); // insert
-        stmt.setInt(1, 0);
-        stmt.setString(2, this.getName());
-        stmt.setInt(3, this.getFloor());
+        ResultSet rs = stmt.getGeneratedKeys();
 
-        int affectedRows = stmt.executeUpdate();
-
-        if (affectedRows == 1)
+        if (rs.next())
         {
-          ResultSet rs = stmt.getGeneratedKeys();
-
-          if (rs.next())
-          {
-            this.setId(rs.getInt(1));
-            setChanged(false);
-          }
-          rs.close();
-        }
-        stmt.close();
-        return !isChanged();
-      } else
-      {
-        stmt = _conn.prepareStatement(sqlQueries[2]); // update
-        stmt.setString(1, this.getName());
-        stmt.setInt(2, this.getFloor());
-        stmt.setInt(3, this.getId());
-
-        int affectedRows = stmt.executeUpdate();
-
-        if (affectedRows == 1)
-        {
+          this.setId(rs.getInt(1));
           setChanged(false);
         }
-        stmt.close();
-        return !isChanged();
+        rs.close();
       }
+      stmt.close();
+      return !isChanged();
     } catch (SQLException ex)
     {
       ex.printStackTrace();
     }
+    return false;
+  }
 
+  private boolean update()
+  {
+    try
+    {
+      Connection _conn = Database.getInstance().getConnection();
+      PreparedStatement stmt;
+
+      stmt = _conn.prepareStatement(sqlQueries[2]); // update
+      stmt.setString(1, this.getName());
+      stmt.setInt(2, this.getFloor());
+      stmt.setInt(3, this.getId());
+
+      int affectedRows = stmt.executeUpdate();
+
+      if (affectedRows == 1)
+      {
+        setChanged(false);
+      }
+      stmt.close();
+      return !isChanged();
+    } catch (SQLException ex)
+    {
+      ex.printStackTrace();
+    }
     return false;
   }
 
@@ -221,11 +205,6 @@ public class ZoneModel implements IModel
   @Override
   public String toString()
   {
-    return "ZoneModel{" +
-      "id=" + id +
-      ", name='" + name + '\'' +
-      ", floor=" + floor +
-      ", changed=" + changed +
-      '}';
+    return String.format("ZoneModel{id=%d, name='%s', floor=%d, changed=%s}", id, name, floor, changed);
   }
 }

@@ -6,7 +6,7 @@ package smarthouselib.db;
  */
 public interface IModel
 {
-  boolean update();
+  boolean load(int Id);
 
   boolean save();
 

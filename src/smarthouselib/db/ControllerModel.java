@@ -20,7 +20,7 @@ public abstract class ControllerModel implements IModel
   private static String tableName = "controllers";
   private static String[] sqlQueries = {
     "SELECT `id`, `controller_type`, `controller_driver`, `name`, `configuration` FROM `controllers` WHERE `id` = ?;",
-    "INSERT INTO `controllers` (`id`, `controller_type`, `controller_driver`, `name`, `configuration`) VALUES (?, ?, ?, ?);",
+    "INSERT INTO `controllers` (`id`, `controller_type`, `controller_driver`, `name`, `configuration`) VALUES (?, ?, ?, ?, ?);",
     "UPDATE `controllers` SET `controller_type` = ?, `controller_driver` = ?, `name` = ?, `configuration` = ? WHERE `id` = ?;"
   };
 
