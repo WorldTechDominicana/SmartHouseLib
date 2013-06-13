@@ -34,6 +34,16 @@ public abstract class ControllerModel implements IModel
     setChanged(false);
   }
 
+  public ControllerModel()
+  {
+    this.id = 0;
+    this.controllerType = "";
+    this.controllerDriver = "";
+    this.name = "Unset";
+    this.configuration = "";
+    setChanged(false);
+  }
+
   public int getId()
   {
     return id;

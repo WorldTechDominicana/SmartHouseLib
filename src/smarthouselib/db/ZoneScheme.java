@@ -10,9 +10,9 @@ import java.util.ArrayList;
  * @author cameri
  * @since 6/13/13
  */
-public class Zones
+public class ZoneScheme
 {
-  protected Zones()
+  protected ZoneScheme()
   {
 
   }

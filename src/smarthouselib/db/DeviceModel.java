@@ -26,6 +26,28 @@ public class DeviceModel implements IModel
     "UPDATE `zones` SET `device_type`= ?, `controller_id` = ?, `zone_id` = ?, `name` = ?, `address` = ? WHERE `id` = ?"
   };
 
+  public DeviceModel(int id, String deviceType, int controllerId, int zoneId, String name, String address)
+  {
+    this.id = id;
+    this.deviceType = deviceType;
+    this.controllerId = controllerId;
+    this.zoneId = zoneId;
+    this.name = name;
+    this.address = address;
+    setChanged(false);
+  }
+
+  public DeviceModel()
+  {
+    this.id = 0;
+    this.deviceType = "";
+    this.controllerId = 0;
+    this.zoneId = 0;
+    this.name = "Unset";
+    this.address = "";
+    setChanged(false);
+  }
+
   @Override
   public boolean load(int id)
   {
