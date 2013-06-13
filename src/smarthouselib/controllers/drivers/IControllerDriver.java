@@ -6,5 +6,11 @@ package smarthouselib.controllers.drivers;
  */
 public interface IControllerDriver
 {
+  void initialize();
 
+  boolean write(String command);
+
+  ControllerDriverState getState();
+
+  void setState(ControllerDriverState state);
 }

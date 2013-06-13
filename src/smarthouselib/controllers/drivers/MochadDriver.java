@@ -9,7 +9,7 @@ import java.net.Socket;
  */
 public class MochadDriver implements IControllerDriver
 {
-
+  ControllerDriverState state = ControllerDriverState.Uninitialized;
   static MochadDriver instance;
   String address = "localhost";
   int port = 1099;
@@ -17,6 +17,12 @@ public class MochadDriver implements IControllerDriver
   protected MochadDriver()
   {
     /* exists only to disallow instantiation */
+  }
+
+  @Override
+  public void initialize()
+  {
+    setState(ControllerDriverState.Initialized);
   }
 
   public static MochadDriver getInstance()
@@ -68,11 +74,20 @@ public class MochadDriver implements IControllerDriver
   }
 
   @Override
+  public ControllerDriverState getState()
+  {
+    return this.state;
+  }
+
+  @Override
+  public void setState(ControllerDriverState state)
+  {
+    this.state = state;
+  }
+
+  @Override
   public String toString()
   {
-    return "MochadDriver{" +
-      "address='" + address + '\'' +
-      ", port=" + port +
-      '}';
+    return String.format("MochadDriver{address='%s', port=%d}", address, port);
   }
 }

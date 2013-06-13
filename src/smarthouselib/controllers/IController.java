@@ -9,7 +9,13 @@ import smarthouselib.controllers.drivers.IControllerDriver;
 public interface IController
 {
 
-  void initialize(IControllerDriver driver);
+  void initialize() throws Exception;
 
   IControllerDriver getDriver();
+
+  void setDriver(IControllerDriver driver);
+
+  ControllerState getState();
+
+  void setState(ControllerState state);
 }

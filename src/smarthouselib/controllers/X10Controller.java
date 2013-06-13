@@ -1,10 +1,10 @@
 package smarthouselib.controllers;
 
 import smarthouselib.controllers.drivers.IControllerDriver;
-import smarthouselib.devices.DeviceTypes;
+import smarthouselib.controllers.drivers.MochadDriver;
 import smarthouselib.devices.IDevice;
-import smarthouselib.devices.Lamp;
-import smarthouselib.devices.drivers.X10LampDriver;
+import smarthouselib.exceptions.InvalidControllerDriver;
+import smarthouselib.exceptions.InvalidControllerState;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,50 +13,41 @@ import java.util.Map;
  * @author cameri
  * @since 6/6/13
  */
-public class X10Controller implements IController
+public class X10Controller extends Controller
 {
 
-  IControllerDriver controller_driver;
   Map<String, IDevice> deviceMap = new HashMap<String, IDevice>();
 
-  @Override
-  public void initialize(IControllerDriver driver)
+  public X10Controller(int id, String controllerType, String controllerDriver, String name, String configuration)
   {
-    this.controller_driver = driver;
+    super(id, controllerType, controllerDriver, name, configuration);
   }
 
   @Override
-  public IControllerDriver getDriver()
+  public void initialize() throws InvalidControllerDriver, InvalidControllerState
   {
-    return this.controller_driver;
+    super.initialize();
+
+    setState(ControllerState.Initializing);
+    String cdriver = this.getControllerDriver();
+    if (cdriver == "MochadDriver")
+    {
+      setDriver(MochadDriver.getInstance());
+      setState(ControllerState.Initialized);
+    } else
+    {
+      setState(ControllerState.Failed);
+      throw new InvalidControllerDriver();
+    }
   }
 
-  public IDevice newDevice(int id, String name, DeviceTypes deviceTypes)
+  public boolean write(String command)
   {
-    if (deviceMap.containsKey(id))
-      return null;
-
-    return null;
-  }
-
-  public Lamp newLamp(int Id, String name)
-  {
-
-
-    Lamp newLamp = new Lamp();
-    newLamp.setId(Id);
-
-    // Get new driver
-    X10LampDriver driver = new X10LampDriver();
-    newLamp.setDriver(driver);
-
-    return newLamp;
-  }
-
-
-  @Override
-  public String toString()
-  {
-    return "X10Controller";
+    IControllerDriver _driver = this.getDriver();
+    if (_driver != null)
+    {
+      return _driver.write(command);
+    }
+    return false;
   }
 }

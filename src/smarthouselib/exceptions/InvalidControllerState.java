@@ -7,4 +7,8 @@ package smarthouselib.exceptions;
 public class InvalidControllerState extends Exception
 {
 
+  public InvalidControllerState(String s)
+  {
+    super(s);
+  }
 }
