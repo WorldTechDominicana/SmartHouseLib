@@ -10,29 +10,31 @@ import java.util.ArrayList;
  * @author cameri
  * @since 6/13/13
  */
-public class ZoneScheme
+public class Zones
 {
-  protected ZoneScheme()
-  {
+  DatabaseContext db;
 
+  public Zones(DatabaseContext db)
+  {
+    this.db = db;
   }
 
   private static String sqlQueries[] = {
     "SELECT `id`, `name`, `floor` FROM `zones`;"
   };
 
-  public static ZoneModel getById(int id)
+  public Zone getById(int id)
   {
-    ZoneModel zone = new ZoneModel();
+    Zone zone = new Zone(this.db);
     if (zone.load(id))
       return zone;
     return null;
   }
 
-  public static ZoneModel[] getAll()
+  public Zone[] getAll()
   {
-    ArrayList<ZoneModel> zoneModels = new ArrayList<ZoneModel>();
-    Connection _conn = Database.getInstance().getConnection();
+    ArrayList<Zone> zones = new ArrayList<Zone>();
+    Connection _conn = db.getConnection();
     PreparedStatement stmt;
 
     try
@@ -42,14 +44,14 @@ public class ZoneScheme
 
       while (rs.next())
       {
-        ZoneModel zm = new ZoneModel();
+        Zone zm = new Zone(this.db);
 
         zm.setId(rs.getInt(1));
         zm.setName(rs.getString(2));
         zm.setFloor(rs.getInt(3));
         zm.setChanged(false);
 
-        zoneModels.add(zm);
+        zones.add(zm);
       }
 
       rs.close();
@@ -60,6 +62,6 @@ public class ZoneScheme
       ex.printStackTrace();
     }
 
-    return (ZoneModel[]) zoneModels.toArray();
+    return (Zone[]) zones.toArray();
   }
 }

@@ -9,36 +9,36 @@ import java.sql.SQLException;
  * @author cameri
  * @since 6/9/13
  */
-public abstract class ControllerModel implements IModel
+public class Controller implements IModel
 {
   private int id;
   private String controllerType;
-  private String controllerDriver;
   private String name;
   private String configuration;
   private boolean changed = false;
+  private DatabaseContext db;
   private static String tableName = "controllers";
   private static String[] sqlQueries = {
-    "SELECT `id`, `controller_type`, `controller_driver`, `name`, `configuration` FROM `controllers` WHERE `id` = ?;",
-    "INSERT INTO `controllers` (`id`, `controller_type`, `controller_driver`, `name`, `configuration`) VALUES (?, ?, ?, ?, ?);",
-    "UPDATE `controllers` SET `controller_type` = ?, `controller_driver` = ?, `name` = ?, `configuration` = ? WHERE `id` = ?;"
+    "SELECT `id`, `controller_type`, `name`, `configuration` FROM `controllers` WHERE `id` = ?;",
+    "INSERT INTO `controllers` (`id`, `controller_type`, `name`, `configuration`) VALUES (?, ?, ?, ?);",
+    "UPDATE `controllers` SET `controller_type` = ?, `name` = ?, `configuration` = ? WHERE `id` = ?;"
   };
 
-  public ControllerModel(int id, String controllerType, String controllerDriver, String name, String configuration)
+  public Controller(DatabaseContext db, int id, String controllerType, String name, String configuration)
   {
+    this.db = db;
     this.id = id;
     this.controllerType = controllerType;
-    this.controllerDriver = controllerDriver;
     this.name = name;
     this.configuration = configuration;
     setChanged(false);
   }
 
-  public ControllerModel()
+  public Controller(DatabaseContext db)
   {
+    this.db = db;
     this.id = 0;
     this.controllerType = "";
-    this.controllerDriver = "";
     this.name = "Unset";
     this.configuration = "";
     setChanged(false);
@@ -63,25 +63,11 @@ public abstract class ControllerModel implements IModel
     return controllerType;
   }
 
-  private void setControllerType(String controllerType)
+  public void setControllerType(String controllerType)
   {
     if (this.controllerType != controllerType)
     {
       this.controllerType = controllerType;
-      setChanged(true);
-    }
-  }
-
-  public String getControllerDriver()
-  {
-    return controllerDriver;
-  }
-
-  private void setControllerDriver(String controllerDriver)
-  {
-    if (this.controllerDriver != controllerDriver)
-    {
-      this.controllerDriver = controllerDriver;
       setChanged(true);
     }
   }
@@ -103,7 +89,7 @@ public abstract class ControllerModel implements IModel
   @Override
   public boolean load(int Id)
   {
-    Connection _conn = Database.getInstance().getConnection();
+    Connection _conn = db.getConnection();
     PreparedStatement stmt;
     boolean found = false;
     try
@@ -115,11 +101,11 @@ public abstract class ControllerModel implements IModel
 
       if (rs.next())
       {
-        setId(rs.getInt(1));
-        setControllerType(rs.getString(2));
-        setControllerDriver(rs.getString(3));
-        setName(rs.getString(4));
-        setConfiguration(rs.getString(5));
+        int i = 1;
+        setId(rs.getInt(i++));
+        setControllerType(rs.getString(i++));
+        setName(rs.getString(i++));
+        setConfiguration(rs.getString(i++));
         setChanged(false);
         found = true;
       }
@@ -150,15 +136,15 @@ public abstract class ControllerModel implements IModel
   {
     try
     {
-      Connection _conn = Database.getInstance().getConnection();
+      Connection _conn = db.getConnection();
       PreparedStatement stmt;
 
       stmt = _conn.prepareStatement(sqlQueries[1]); // insert
-      stmt.setInt(1, 0);
-      stmt.setString(2, this.getControllerType());
-      stmt.setString(3, this.getControllerDriver());
-      stmt.setString(4, this.getName());
-      stmt.setString(5, this.getConfiguration());
+      int i = 1;
+      stmt.setInt(i++, 0);
+      stmt.setString(i++, this.getControllerType());
+      stmt.setString(i++, this.getName());
+      stmt.setString(i++, this.getConfiguration());
 
       int affectedRows = stmt.executeUpdate();
 
@@ -186,16 +172,15 @@ public abstract class ControllerModel implements IModel
   {
     try
     {
-      Connection _conn = Database.getInstance().getConnection();
+      Connection _conn = db.getConnection();
       PreparedStatement stmt;
 
       stmt = _conn.prepareStatement(sqlQueries[2]); // update
-
-      stmt.setString(1, this.getControllerType());
-      stmt.setString(2, this.getControllerDriver());
-      stmt.setString(3, this.getName());
-      stmt.setString(4, this.getConfiguration());
-      stmt.setInt(5, this.getId());
+      int i = 1;
+      stmt.setString(i++, this.getControllerType());
+      stmt.setString(i++, this.getName());
+      stmt.setString(i++, this.getConfiguration());
+      stmt.setInt(i++, this.getId());
 
       int affectedRows = stmt.executeUpdate();
 
@@ -241,6 +226,6 @@ public abstract class ControllerModel implements IModel
   @Override
   public String toString()
   {
-    return String.format("ControllerModel{id=%d, controllerType='%s', controllerDriver='%s', name='%s', changed=%s}", id, controllerType, controllerDriver, name, changed);
+    return String.format("Controller{id=%d, controllerType='%s', name='%s', changed=%s}", id, controllerType, name, changed);
   }
 }

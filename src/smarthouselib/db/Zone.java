@@ -9,11 +9,12 @@ import java.sql.SQLException;
  * @author cameri
  * @since 6/12/13
  */
-public class ZoneModel implements IModel
+public class Zone implements IModel
 {
   private int id = 0;
   private String name;
   private int floor;
+  DatabaseContext db;
 
   private boolean changed = false;
   private static String tableName = "zones";
@@ -23,16 +24,18 @@ public class ZoneModel implements IModel
     "UPDATE `zones` SET `name`= ?, `floor`=? WHERE `id` = ?"
   };
 
-  protected ZoneModel()
+  protected Zone(DatabaseContext db)
   {
+    this.db = db;
     this.id = 0;
     this.name = "";
     this.floor = 0;
     this.changed = false;
   }
 
-  public ZoneModel(int id, String name, int floor)
+  public Zone(DatabaseContext db, int id, String name, int floor)
   {
+    this.db = db;
     if (id == 0) // new Zone
     {
       setChanged(true);
@@ -89,7 +92,7 @@ public class ZoneModel implements IModel
   @Override
   public boolean load(int id)
   {
-    Connection _conn = Database.getInstance().getConnection();
+    Connection _conn = db.getConnection();
     PreparedStatement stmt;
     boolean found = false;
     try
@@ -134,7 +137,7 @@ public class ZoneModel implements IModel
   {
     try
     {
-      Connection _conn = Database.getInstance().getConnection();
+      Connection _conn = DatabaseContext.getInstance().getConnection();
       PreparedStatement stmt;
 
       stmt = _conn.prepareStatement(sqlQueries[1]); // insert
@@ -168,7 +171,7 @@ public class ZoneModel implements IModel
   {
     try
     {
-      Connection _conn = Database.getInstance().getConnection();
+      Connection _conn = DatabaseContext.getInstance().getConnection();
       PreparedStatement stmt;
 
       stmt = _conn.prepareStatement(sqlQueries[2]); // update
@@ -205,6 +208,6 @@ public class ZoneModel implements IModel
   @Override
   public String toString()
   {
-    return String.format("ZoneModel{id=%d, name='%s', floor=%d, changed=%s}", id, name, floor, changed);
+    return String.format("Zone{id=%d, name='%s', floor=%d, changed=%s}", id, name, floor, changed);
   }
 }

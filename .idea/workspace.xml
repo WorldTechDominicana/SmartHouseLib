@@ -1,54 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32130455-809f-4ab8-9619-5383e40ccd9a" name="Default" comment="Added driver to interface with mochad. No implementation yet.&#10;Added missing getDriver and getController methods to interfaces that needed it. This way we can traverse through the structure.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/Device.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smarthouselib/geo/Zone.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smarthouselib/geo/ZoneType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/DeviceFactory.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/DeviceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/IDevice.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/IDevice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/IDimmable.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/IDimmable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/IToggleable.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/IToggleable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java" />
+    <list default="true" id="32130455-809f-4ab8-9619-5383e40ccd9a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/ControllerDriverState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/IControllerDriver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/MochadDriver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/exceptions/InvalidControllerDriver.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/ControllerModel.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Controller.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/Database.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/DatabaseContext.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/DeviceModel.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Device.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/ZoneModel.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Zone.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/ZoneScheme.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Zones.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java" afterPath="$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/IController.java" afterPath="$PROJECT_DIR$/src/smarthouselib/controllers/IController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartHouseLib.iml" afterPath="$PROJECT_DIR$/SmartHouseLib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java" afterPath="$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/geo/Zone.java" afterPath="$PROJECT_DIR$/src/smarthouselib/geo/Zone.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmartHouseLib.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370637674090" ignored="false" />
+    <file path="/Dummy.txt" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371938636487" ignored="false" />
     <file path="$PROJECT_DIR$/../SmartHouseConsole/SmartHouseConsole.iml" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530901570" ignored="false" />
-    <file path="$PROJECT_DIR$/../SmartHouseConsole/src/com/company/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530931152" ignored="false" />
-    <file path="/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530929359" ignored="false" />
+    <file path="$PROJECT_DIR$/../SmartHouseConsole/src/com/company/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370754027198" ignored="false" />
+    <file path="/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370753666938" ignored="false" />
     <file path="$PROJECT_DIR$/../SmartHouseConsole/.idea/workspace.xml" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370535414893" ignored="false" />
     <file path="/X10LampModuleDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370558633604" ignored="false" />
-    <file path="/DimmableLamp.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370637985744" ignored="false" />
+    <file path="/DimmableLamp.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370877961269" ignored="false" />
     <file path="/IDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370557338728" ignored="false" />
     <file path="/X10ControllerDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370557305642" ignored="false" />
-    <file path="/IController.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635743003" ignored="false" />
-    <file path="/X10Controller.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635768732" ignored="false" />
-    <file path="/ControllerFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635227929" ignored="false" />
-    <file path="/IDevice.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370642029386" ignored="false" />
+    <file path="/IController.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371143327123" ignored="false" />
+    <file path="/X10Controller.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371938530724" ignored="false" />
+    <file path="/ControllerFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371122390526" ignored="false" />
+    <file path="/IDevice.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370893200249" ignored="false" />
     <file path="/Lamp.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370642126761" ignored="false" />
     <file path="/IToggleable.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370564765198" ignored="false" />
     <file path="/DeviceState.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370559499819" ignored="false" />
     <file path="/IDimmableDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370637066593" ignored="false" />
     <file path="/X10DimmableLampDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370637103512" ignored="false" />
-    <file path="/a.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635160595" ignored="false" />
-    <file path="/sample.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370563189221" ignored="false" />
+    <file path="/a.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370785999697" ignored="false" />
+    <file path="/sample.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370786053663" ignored="false" />
     <file path="/Appliance.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370642094854" ignored="false" />
-    <file path="/DeviceFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370642208162" ignored="false" />
+    <file path="/DeviceFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370865583683" ignored="false" />
     <file path="/DriverFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370565089662" ignored="false" />
     <file path="/DeviceDriverState.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370565133575" ignored="false" />
     <file path="/IDeviceDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635880405" ignored="false" />
     <file path="/X10LampDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635968959" ignored="false" />
-    <file path="/MochadDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635700661" ignored="false" />
-    <file path="/IControllerDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370635568333" ignored="false" />
+    <file path="/MochadDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371144607418" ignored="false" />
+    <file path="/IControllerDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371144530191" ignored="false" />
     <file path="/IDimmable.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370637769005" ignored="false" />
     <file path="/ZoneKind.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370639608379" ignored="false" />
-    <file path="/Zone.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370641742299" ignored="false" />
-    <file path="/Device.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370642054089" ignored="false" />
+    <file path="/Zone.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371938689550" ignored="false" />
+    <file path="/Device.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371936806979" ignored="false" />
+    <file path="/IUninterruptiblePowerSupply.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370816950962" ignored="false" />
+    <file path="/APCAccessDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370783652957" ignored="false" />
+    <file path="/IUPSDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370813298254" ignored="false" />
+    <file path="/Process.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370785544268" ignored="false" />
+    <file path="/a.groovy" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370785996369" ignored="false" />
+    <file path="/APCUPSDDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370818663744" ignored="false" />
+    <file path="/UninterruptiblePowerSupply.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370818483285" ignored="false" />
+    <file path="/UPS.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370865535184" ignored="false" />
+    <file path="/UPSDriverFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370817833114" ignored="false" />
+    <file path="/DeviceDriverFactory.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370878305109" ignored="false" />
+    <file path="/IUPS.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370818080774" ignored="false" />
+    <file path="$PROJECT_DIR$/out/production/SmartHouseLib/smarthouselib/io/ProcessHelper.class" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370753911856" ignored="false" />
+    <file path="/X10ApplianceDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370878202364" ignored="false" />
+    <file path="/fragment.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371144672424" ignored="false" />
+    <file path="/DeviceTypes.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370893588060" ignored="false" />
+    <file path="/IModel.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370754564165" ignored="false" />
+    <file path="/ZoneModel.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371124767025" ignored="false" />
+    <file path="/Database.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371936344202" ignored="false" />
+    <file path="/ControllerModel.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371935527782" ignored="false" />
+    <file path="/ControllerState.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371144256905" ignored="false" />
+    <file path="/InvalidControllerDriver.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371142745341" ignored="false" />
+    <file path="/ControllerDriverState.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371144314500" ignored="false" />
+    <file path="/Controller.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371938486661" ignored="false" />
+    <file path="/InvalidControlleState.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371143261931" ignored="false" />
+    <file path="/InvalidControllerState.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371144058300" ignored="false" />
+    <file path="/DeviceModel.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371149153704" ignored="false" />
+    <file path="/a.dummy" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371147577488" ignored="false" />
+    <file path="/Zones.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371936742761" ignored="false" />
+    <file path="/Controllers.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371937652885" ignored="false" />
+    <file path="/Devices.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371937685137" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,39 +149,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Appliance.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java">
+      <file leaf-file-name="X10Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="239" selection-end="286" vertical-scroll-proportion="0.0">
+            <state line="33" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Zone.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/Zone.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="9" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2888889">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceFactory.java">
+      <file leaf-file-name="Device.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Device.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="138" column="3" selection-start="3337" selection-end="3337" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Zone.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/Zone.java">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Zone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="93" column="3" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IDevice.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IDevice.java">
+      <file leaf-file-name="IModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/IModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="39" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+            <state line="7" column="1" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,59 +207,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZoneType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/ZoneType.java">
+      <file leaf-file-name="Controllers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controllers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DimmableLamp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.0">
+            <state line="28" column="50" selection-start="565" selection-end="565" vertical-scroll-proportion="-11.4">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#732#744#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IToggleable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IToggleable.java">
+      <file leaf-file-name="Devices.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Devices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lamp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Device.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Device.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="21" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.6224256">
+            <state line="27" column="3" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#702#710#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IDimmable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IDimmable.java">
+      <file leaf-file-name="DatabaseContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/DatabaseContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+            <state line="105" column="0" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="203" column="3" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,6 +265,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -235,22 +273,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/drivers/IDeviceDriver.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/drivers/IDimmableDriver.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/MochadDriver.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/ZonesSchema.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/DeviceModel.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/ZoneScheme.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/controllers/IController.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/ControllerModel.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Database.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Zone.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Zones.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Device.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Controller.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/DatabaseContext.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Controllers.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/db/Devices.java" />
+        <option value="$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java" />
         <option value="$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/drivers/X10DimmableLampDriver.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/drivers/X10LampDriver.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/IDimmable.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/IToggleable.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/geo/ZoneKind.java" />
         <option value="$PROJECT_DIR$/src/smarthouselib/geo/Zone.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/IDevice.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/Device.java" />
-        <option value="$PROJECT_DIR$/src/smarthouselib/devices/DeviceFactory.java" />
       </list>
     </option>
   </component>
@@ -306,12 +344,35 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="SmartHouseLib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartHouseLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSON-java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSON-java.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -321,6 +382,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SmartHouseLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartHouseLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartHouseLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smarthouselib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,23 +464,68 @@
               <option name="myItemId" value="smarthouselib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartHouseLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartHouseLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smarthouselib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="179" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="181" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="179" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../libraries/dist/JSON-java.jar!/" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="185" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="979" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="979" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="185" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="181" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="template.copyright.formatting" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
@@ -417,19 +541,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -457,6 +568,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -547,31 +671,111 @@
       <created>1370637677956</created>
       <updated>1370637677956</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created an abstract class Device that implements the basic functionality of IDevice.&#10;Added Zone and ZoneType to smarthouselib.geo package.&#10;The package smarthouselib.geo will be used for all location-based functionality.">
+      <created>1370642791410</created>
+      <updated>1370642791410</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added ProcessHelper to execute command line applications and return their output.&#10;This class needs to be improved so that we can read System.err too.">
+      <created>1370820090344</created>
+      <updated>1370820090344</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added UPS, IUPS, and an APC UPS driver partial implementation.">
+      <created>1370820173027</created>
+      <updated>1370820173027</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added write function to our mochad driver implementation.">
+      <created>1370876620235</created>
+      <updated>1370876620235</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added X10ApplianceDriver.">
+      <created>1370878464595</created>
+      <updated>1370878464595</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added basic DB functionality and implemented the database model for Zone.">
+      <created>1370748049032</created>
+      <updated>1370748049032</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Removed initialize() from devices.&#10;">
+      <created>1370748719838</created>
+      <updated>1370748719838</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Removed unused variable.">
+      <created>1370750078235</created>
+      <updated>1370750078235</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Finished ControllerModel.">
+      <created>1371142472554</created>
+      <updated>1371142472554</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added InvalidControllerDriver and InvalidControllerState exceptions.">
+      <created>1371143303027</created>
+      <updated>1371143303027</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed typo in InvalidControllerState.&#10;">
+      <created>1371143591981</created>
+      <updated>1371143591981</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Done defining DeviceModel, ControllerModel and ZoneModel. Closes #1.">
+      <created>1371149691485</created>
+      <updated>1371149691486</updated>
+    </task>
+    <task id="LOCAL-00020" summary="~">
+      <created>1371158512976</created>
+      <updated>1371158512976</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added constructor methods to ControllerModel and DeviceModel.">
+      <created>1371136580424</created>
+      <updated>1371136580424</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Closed #2.">
+      <created>1371139681106</created>
+      <updated>1371139681106</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1602" height="874" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25069252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825485" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32409972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2001287" sideWeight="0.6703601" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18146718" sideWeight="0.6759003" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -618,7 +822,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added driver to interface with mochad. No implementation yet.&#10;Added missing getDriver and getController methods to interfaces that needed it. This way we can traverse through the structure.&#10;Added toString() to a few classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -638,6 +842,21 @@
     <MESSAGE value="Added DeviceDriverFactory class.&#10;Added DeviceDriverState enum.&#10;Renamed SimpleDeviceFactory to DeviceFactory and moved it up from drivers." />
     <MESSAGE value="Added driver to interface with mochad. No implementation yet.&#10;Added missing getDriver and getController methods to interfaces that needed it. This way we can traverse through the structure." />
     <MESSAGE value="Added driver to interface with mochad. No implementation yet.&#10;Added missing getDriver and getController methods to interfaces that needed it. This way we can traverse through the structure.&#10;Added toString() to a few classes." />
+    <MESSAGE value="Created an abstract class Device that implements the basic functionality of IDevice.&#10;Added Zone and ZoneType to smarthouselib.geo package.&#10;The package smarthouselib.geo will be used for all location-based functionality." />
+    <MESSAGE value="Added ProcessHelper to execute command line applications and return their output.&#10;This class needs to be improved so that we can read System.err too." />
+    <MESSAGE value="Added UPS, IUPS, and an APC UPS driver partial implementation." />
+    <MESSAGE value="Added write function to our mochad driver implementation." />
+    <MESSAGE value="Added X10ApplianceDriver." />
+    <MESSAGE value="Added basic DB functionality and implemented the database model for Zone." />
+    <MESSAGE value="Removed initialize() from devices.&#10;" />
+    <MESSAGE value="Removed unused variable." />
+    <MESSAGE value="Finished ControllerModel." />
+    <MESSAGE value="Added InvalidControllerDriver and InvalidControllerState exceptions." />
+    <MESSAGE value="Fixed typo in InvalidControllerState.&#10;" />
+    <MESSAGE value="Done defining DeviceModel, ControllerModel and ZoneModel. Closes #1." />
+    <MESSAGE value="~" />
+    <MESSAGE value="Added constructor methods to ControllerModel and DeviceModel." />
+    <MESSAGE value="Closed #2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -647,128 +866,240 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/ControllerFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/exceptions/InvalidControllerState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+        <state line="11" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/ControllerState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/IController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../libraries/dist/JSON-java.jar!/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../libraries/dist/JSON-java.jar!/JSON-java.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Zones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/IModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="1" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="3" selection-start="3337" selection-end="3337" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="50" selection-start="565" selection-end="565" vertical-scroll-proportion="-11.4">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#732#744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/DatabaseContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="3" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Devices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="3" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#702#710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/drivers/MochadDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="3" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#MochadDriver#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/drivers/X10DimmableLampDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/drivers/IDimmableDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="74" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IDimmable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IToggleable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/ZoneType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="239" selection-end="286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Zone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="93" column="3" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/Zone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+        <state line="13" column="9" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2888889">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="39" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="21" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.6224256">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>JSON-java</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SmartHouseLib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

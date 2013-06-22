@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * @author cameri
  * @since 6/13/13
  */
-public class DeviceModel implements IModel
+public class Device implements IModel
 {
   private int id;
   private String deviceType;
@@ -17,6 +17,7 @@ public class DeviceModel implements IModel
   private int zoneId;
   private String name;
   private String address;
+  private DatabaseContext db;
 
   private boolean changed = false;
   private static String tableName = "devices";
@@ -26,8 +27,9 @@ public class DeviceModel implements IModel
     "UPDATE `zones` SET `device_type`= ?, `controller_id` = ?, `zone_id` = ?, `name` = ?, `address` = ? WHERE `id` = ?"
   };
 
-  public DeviceModel(int id, String deviceType, int controllerId, int zoneId, String name, String address)
+  public Device(DatabaseContext db, int id, String deviceType, int controllerId, int zoneId, String name, String address)
   {
+    this.db = db;
     this.id = id;
     this.deviceType = deviceType;
     this.controllerId = controllerId;
@@ -37,8 +39,9 @@ public class DeviceModel implements IModel
     setChanged(false);
   }
 
-  public DeviceModel()
+  public Device(DatabaseContext db)
   {
+    this.db = db;
     this.id = 0;
     this.deviceType = "";
     this.controllerId = 0;
@@ -51,7 +54,7 @@ public class DeviceModel implements IModel
   @Override
   public boolean load(int id)
   {
-    Connection _conn = Database.getInstance().getConnection();
+    Connection _conn = db.getConnection();
     PreparedStatement stmt;
     boolean found = false;
     try
@@ -99,7 +102,7 @@ public class DeviceModel implements IModel
   {
     try
     {
-      Connection _conn = Database.getInstance().getConnection();
+      Connection _conn = db.getConnection();
       PreparedStatement stmt;
 // "INSERT INTO `zones` (`id`, `device_type`, `controller_id`, `zone_id`, `name`, `address`) VALUES (?, ?, ?, ?, ?, ?);",
       stmt = _conn.prepareStatement(sqlQueries[1]); // insert
@@ -136,7 +139,7 @@ public class DeviceModel implements IModel
   {
     try
     {
-      Connection _conn = Database.getInstance().getConnection();
+      Connection _conn = db.getConnection();
       PreparedStatement stmt;
 
       stmt = _conn.prepareStatement(sqlQueries[2]); // update
@@ -257,6 +260,6 @@ public class DeviceModel implements IModel
   @Override
   public String toString()
   {
-    return String.format("DeviceModel{name='%s', deviceType='%s', id=%d, address='%s', changed=%s}", name, deviceType, id, address, changed);
+    return String.format("Device{name='%s', deviceType='%s', id=%d, address='%s', changed=%s}", name, deviceType, id, address, changed);
   }
 }

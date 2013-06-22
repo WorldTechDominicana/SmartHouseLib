@@ -10,25 +10,28 @@ import java.sql.SQLException;
  * @author cameri
  * @since 6/12/13
  */
-public class Database
+public class DatabaseContext
 {
-  private static Database instance;
+  private static DatabaseContext instance;
   private MySQLConnection connection;
   private String databaseName;
   private String username;
   private String password;
   private String hostname;
   private int port;
+  private Controllers controllers;
+  private Zones zones;
+  private Devices devices;
 
-  protected Database()
+  protected DatabaseContext()
   {
 
   }
 
-  public static Database getInstance()
+  public static DatabaseContext getInstance()
   {
     if (instance == null)
-      instance = new Database();
+      instance = new DatabaseContext();
     return instance;
   }
 
@@ -92,9 +95,36 @@ public class Database
     return this.connection;
   }
 
+  public Controllers Controllers()
+  {
+    if (this.controllers == null)
+    {
+      this.controllers = new Controllers(this);
+    }
+    return this.controllers;
+  }
+
+  public Zones Zones()
+  {
+    if (this.zones == null)
+    {
+      this.zones = new Zones(this);
+    }
+    return this.zones;
+  }
+
+  public Devices Devices()
+  {
+    if (this.devices == null)
+    {
+      this.devices = new Devices(this);
+    }
+    return this.devices;
+  }
+
   @Override
   public String toString()
   {
-    return String.format("Database{hostname='%s', port=%d, databaseName='%s'}", hostname, port, databaseName);
+    return String.format("DatabaseContext{hostname='%s', port=%d, databaseName='%s'}", hostname, port, databaseName);
   }
 }

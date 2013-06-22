@@ -1,17 +1,17 @@
 package smarthouselib.geo;
 
-import smarthouselib.db.ZoneModel;
+import smarthouselib.db.DatabaseContext;
 
 /**
  * @author cameri
  * @since 6/7/13
  */
-public class Zone extends ZoneModel
+public class Zone extends smarthouselib.db.Zone
 {
 
-  public Zone(int id, String name, int floor)
+  public Zone(DatabaseContext db, int id, String name, int floor)
   {
-    super(id, name, floor);
+    super(db, id, name, floor);
   }
 
 }

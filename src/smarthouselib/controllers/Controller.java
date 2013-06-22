@@ -1,29 +1,27 @@
 package smarthouselib.controllers;
 
-import smarthouselib.controllers.drivers.IControllerDriver;
-import smarthouselib.db.ControllerModel;
-import smarthouselib.exceptions.InvalidControllerDriver;
+import smarthouselib.db.DatabaseContext;
 import smarthouselib.exceptions.InvalidControllerState;
 
 /**
  * @author cameri
  * @since 6/13/13
  */
-public abstract class Controller extends ControllerModel implements IController
+public abstract class Controller extends smarthouselib.db.Controller implements IController
 {
   ControllerState state = ControllerState.Uninitialized;
-  IControllerDriver controller_driver;
 
-  public Controller(int id, String controllerType, String controllerDriver, String name, String configuration)
+  public Controller(DatabaseContext db, int id, String controllerType, String name, String configuration)
   {
-    super(id, controllerType, controllerDriver, name, configuration);
+    super(db, id, controllerType, name, configuration);
+    setState(ControllerState.Uninitialized);
   }
 
   @Override
-  public void initialize() throws InvalidControllerDriver, InvalidControllerState
+  public void initialize() throws InvalidControllerState
   {
     if (getState() != ControllerState.Uninitialized)
-      throw new InvalidControllerState("Controller is not uninitialized");
+      throw new InvalidControllerState("Controller already initialized");
 
   }
 
@@ -39,15 +37,4 @@ public abstract class Controller extends ControllerModel implements IController
     this.state = state;
   }
 
-  @Override
-  public IControllerDriver getDriver()
-  {
-    return this.controller_driver;
-  }
-
-  @Override
-  public void setDriver(IControllerDriver driver)
-  {
-    this.controller_driver = driver;
-  }
 }

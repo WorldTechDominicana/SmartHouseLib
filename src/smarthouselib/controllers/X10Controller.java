@@ -1,11 +1,11 @@
 package smarthouselib.controllers;
 
-import smarthouselib.controllers.drivers.IControllerDriver;
-import smarthouselib.controllers.drivers.MochadDriver;
+import smarthouselib.db.DatabaseContext;
 import smarthouselib.devices.IDevice;
-import smarthouselib.exceptions.InvalidControllerDriver;
 import smarthouselib.exceptions.InvalidControllerState;
 
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,37 +17,42 @@ public class X10Controller extends Controller
 {
 
   Map<String, IDevice> deviceMap = new HashMap<String, IDevice>();
+  private String address = "localhost";
+  private int port = 1099;
 
-  public X10Controller(int id, String controllerType, String controllerDriver, String name, String configuration)
+  public X10Controller(DatabaseContext db, int id, String controllerType, String controllerDriver, String name, String configuration)
   {
-    super(id, controllerType, controllerDriver, name, configuration);
+    super(db, id, controllerType, name, configuration);
   }
 
   @Override
-  public void initialize() throws InvalidControllerDriver, InvalidControllerState
+  public void initialize() throws InvalidControllerState
   {
     super.initialize();
 
     setState(ControllerState.Initializing);
-    String cdriver = this.getControllerDriver();
-    if (cdriver == "MochadDriver")
-    {
-      setDriver(MochadDriver.getInstance());
-      setState(ControllerState.Initialized);
-    } else
-    {
-      setState(ControllerState.Failed);
-      throw new InvalidControllerDriver();
-    }
+
+
+    setState(ControllerState.Initialized);
   }
 
-  public boolean write(String command)
+  public synchronized boolean write(String command)
   {
-    IControllerDriver _driver = this.getDriver();
-    if (_driver != null)
+    boolean successful = false;
+    try
     {
-      return _driver.write(command);
+      Socket socket = new Socket(this.address, this.port);
+      PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+      writer.write(command);
+      successful = true;
+      writer.close();
+      socket.close();
+    } catch (Exception ex)
+    {
+      ex.printStackTrace();
     }
-    return false;
+    return successful;
+
   }
+
 }
