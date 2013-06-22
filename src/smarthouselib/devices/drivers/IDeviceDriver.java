@@ -1,6 +1,7 @@
 package smarthouselib.devices.drivers;
 
 import smarthouselib.controllers.IController;
+import smarthouselib.devices.IDevice;
 
 /**
  * @author cameri
@@ -9,9 +10,11 @@ import smarthouselib.controllers.IController;
 public interface IDeviceDriver
 {
 
-  void initialize(IController controller);
+  void initialize(IDevice device, IController controller);
 
   IController getController();
+
+  IDevice getDevice();
 
   DeviceDriverState getState();
 

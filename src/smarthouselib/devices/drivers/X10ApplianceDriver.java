@@ -1,6 +1,8 @@
 package smarthouselib.devices.drivers;
 
 import smarthouselib.controllers.IController;
+import smarthouselib.controllers.X10Controller;
+import smarthouselib.devices.IDevice;
 
 /**
  * @author cameri
@@ -9,11 +11,13 @@ import smarthouselib.controllers.IController;
 public class X10ApplianceDriver implements IDeviceDriver, IToggleableDriver
 {
   IController controller;
+  IDevice device;
   DeviceDriverState currentState = DeviceDriverState.Uninitialized;
 
   @Override
-  public void initialize(IController controller)
+  public void initialize(IDevice device, IController controller)
   {
+    this.device = device;
     this.controller = controller;
 
     // Set state as initialized
@@ -27,6 +31,12 @@ public class X10ApplianceDriver implements IDeviceDriver, IToggleableDriver
   }
 
   @Override
+  public IDevice getDevice()
+  {
+    return this.device;
+  }
+
+  @Override
   public DeviceDriverState getState()
   {
     return this.currentState;
@@ -35,13 +45,21 @@ public class X10ApplianceDriver implements IDeviceDriver, IToggleableDriver
   @Override
   public void turnOn()
   {
-    System.out.println("Turning appliance on.");
+    if (this.controller instanceof X10Controller)
+    {
+      String command = String.format("rf %s on\n", this.getDevice().getAddress());
+      ((X10Controller) this.controller).write(command);
+    }
   }
 
   @Override
   public void turnOff()
   {
-    System.out.println("Turning appliance off.");
+    if (this.controller instanceof X10Controller)
+    {
+      String command = String.format("rf %s off\n", this.getDevice().getAddress());
+      ((X10Controller) this.controller).write(command);
+    }
   }
 
   @Override

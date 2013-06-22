@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author cameri
@@ -31,9 +32,11 @@ public class Zones
     return null;
   }
 
-  public Zone[] getAll()
+  public List<Zone> getAll()
   {
-    ArrayList<Zone> zones = new ArrayList<Zone>();
+
+    List<Zone> zones = new ArrayList<Zone>();
+
     Connection _conn = db.getConnection();
     PreparedStatement stmt;
 
@@ -46,11 +49,11 @@ public class Zones
       {
         Zone zm = new Zone(this.db);
 
-        zm.setId(rs.getInt(1));
-        zm.setName(rs.getString(2));
-        zm.setFloor(rs.getInt(3));
+        int i = 1;
+        zm.setId(rs.getInt(i++));
+        zm.setName(rs.getString(i++));
+        zm.setFloor(rs.getInt(i++));
         zm.setChanged(false);
-
         zones.add(zm);
       }
 
@@ -62,6 +65,6 @@ public class Zones
       ex.printStackTrace();
     }
 
-    return (Zone[]) zones.toArray();
+    return zones;
   }
 }

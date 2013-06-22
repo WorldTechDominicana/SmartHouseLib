@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author cameri
@@ -32,7 +33,7 @@ public class Controllers
     return null;
   }
 
-  public Controller[] getAll()
+  public List<Controller> getAll()
   {
     ArrayList<Controller> controllers = new ArrayList<Controller>();
     Connection _conn = DatabaseContext.getInstance().getConnection();
@@ -63,6 +64,6 @@ public class Controllers
       ex.printStackTrace();
     }
 
-    return (Controller[]) controllers.toArray();
+    return controllers;
   }
 }

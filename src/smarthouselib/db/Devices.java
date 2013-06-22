@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author cameri
@@ -12,7 +13,6 @@ import java.util.ArrayList;
  */
 public class Devices
 {
-
   DatabaseContext db = null;
 
   private static String sqlQueries[] = {
@@ -32,9 +32,9 @@ public class Devices
     return null;
   }
 
-  public Device[] getAll()
+  public List<Device> getAll()
   {
-    ArrayList<Device> devices = new ArrayList<Device>();
+    List<Device> devices = new ArrayList<Device>();
     Connection _conn = db.getConnection();
     PreparedStatement stmt;
 
@@ -65,6 +65,6 @@ public class Devices
       ex.printStackTrace();
     }
 
-    return (Device[]) devices.toArray();
+    return devices;
   }
 }

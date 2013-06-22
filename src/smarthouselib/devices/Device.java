@@ -87,7 +87,6 @@ public abstract class Device implements IDevice
   @Override
   public void setZone(Zone zone)
   {
-
     this.zone = zone;
   }
 }

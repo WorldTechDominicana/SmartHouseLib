@@ -1,6 +1,8 @@
 package smarthouselib.devices.drivers;
 
 import smarthouselib.controllers.IController;
+import smarthouselib.controllers.X10Controller;
+import smarthouselib.devices.IDevice;
 
 /**
  * @author cameri
@@ -10,10 +12,11 @@ public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
 {
 
   IController controller;
+  IDevice device;
   DeviceDriverState currentState = DeviceDriverState.Uninitialized;
 
   @Override
-  public void initialize(IController controller)
+  public void initialize(IDevice device, IController controller)
   {
     this.controller = controller;
 
@@ -24,6 +27,12 @@ public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
   public IController getController()
   {
     return this.controller;
+  }
+
+  @Override
+  public IDevice getDevice()
+  {
+    return this.device;
   }
 
   @Override
@@ -47,13 +56,23 @@ public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
   @Override
   public void decreaseBrightness(int amount)
   {
-
+    amount = Math.min(31, Math.max(0, amount));
+    if (this.controller instanceof X10Controller)
+    {
+      String command = String.format("rf %s dim %d\n", this.getDevice().getAddress(), amount);
+      ((X10Controller) this.controller).write(command);
+    }
   }
 
   @Override
   public void increaseBrightness(int amount)
   {
-
+    amount = Math.min(31, Math.max(0, amount));
+    if (this.controller instanceof X10Controller)
+    {
+      String command = String.format("rf %s bright %d\n", this.getDevice().getAddress(), amount);
+      ((X10Controller) this.controller).write(command);
+    }
   }
 
 
