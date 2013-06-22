@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32130455-809f-4ab8-9619-5383e40ccd9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/ControllerDriverState.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/IControllerDriver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/drivers/MochadDriver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/exceptions/InvalidControllerDriver.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/ControllerModel.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/Database.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/DatabaseContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/DeviceModel.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Device.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/ZoneModel.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Zone.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/smarthouselib/db/ZoneScheme.java" afterPath="$PROJECT_DIR$/src/smarthouselib/db/Zones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java" afterPath="$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/IController.java" afterPath="$PROJECT_DIR$/src/smarthouselib/controllers/IController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartHouseLib.iml" afterPath="$PROJECT_DIR$/SmartHouseLib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java" afterPath="$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/smarthouselib/geo/Zone.java" afterPath="$PROJECT_DIR$/src/smarthouselib/geo/Zone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmartHouseLib.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371938636487" ignored="false" />
+    <file path="/Dummy.txt" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1371939419613" ignored="false" />
     <file path="$PROJECT_DIR$/../SmartHouseConsole/SmartHouseConsole.iml" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530901570" ignored="false" />
     <file path="$PROJECT_DIR$/../SmartHouseConsole/src/com/company/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370754027198" ignored="false" />
     <file path="/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370753666938" ignored="false" />
@@ -97,7 +81,7 @@
     <splitter proportion="0.5" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -153,9 +137,7 @@
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,7 +145,7 @@
       <file leaf-file-name="Zone.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/Zone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2888889">
+            <state line="13" column="31" selection-start="265" selection-end="265" vertical-scroll-proportion="0.28803545">
               <folding />
             </state>
           </provider>
@@ -200,9 +182,7 @@
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,11 +190,8 @@
       <file leaf-file-name="Controllers.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controllers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="50" selection-start="565" selection-end="565" vertical-scroll-proportion="-11.4">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#732#744#0" expanded="true" />
-              </folding>
+            <state line="28" column="50" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -223,10 +200,7 @@
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Devices.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="3" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#702#710#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -244,7 +218,9 @@
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="203" column="3" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1371938823583" expanded="true" signature="1195:1276" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -343,7 +319,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -493,18 +468,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="179" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="181" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="179" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../libraries/dist/JSON-java.jar!/" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="185" />
@@ -543,6 +519,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -568,19 +557,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -731,7 +707,11 @@
       <created>1371139681106</created>
       <updated>1371139681106</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="~">
+      <created>1371938793595</created>
+      <updated>1371938793595</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -761,21 +741,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25069252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825485" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32409972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18146718" sideWeight="0.6759003" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18146718" sideWeight="0.6759003" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825485" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32409972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -822,7 +802,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="~" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -854,9 +834,9 @@
     <MESSAGE value="Added InvalidControllerDriver and InvalidControllerState exceptions." />
     <MESSAGE value="Fixed typo in InvalidControllerState.&#10;" />
     <MESSAGE value="Done defining DeviceModel, ControllerModel and ZoneModel. Closes #1." />
-    <MESSAGE value="~" />
     <MESSAGE value="Added constructor methods to ControllerModel and DeviceModel." />
     <MESSAGE value="Closed #2." />
+    <MESSAGE value="~" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -868,9 +848,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/exceptions/InvalidControllerState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/ControllerState.java">
@@ -889,16 +867,12 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../libraries/dist/JSON-java.jar!/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../libraries/dist/JSON-java.jar!/JSON-java.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Zones.java">
@@ -926,11 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controllers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="50" selection-start="565" selection-end="565" vertical-scroll-proportion="-11.4">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#732#744#0" expanded="true" />
-          </folding>
+        <state line="28" column="50" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -944,35 +915,30 @@
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="203" column="3" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1371938823583" expanded="true" signature="1195:1276" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/db/Devices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="3" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#702#710#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/controllers/X10Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -985,7 +951,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/geo/Zone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2888889">
+        <state line="13" column="31" selection-start="265" selection-end="265" vertical-scroll-proportion="0.28803545">
           <folding />
         </state>
       </provider>
