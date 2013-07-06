@@ -78,7 +78,7 @@ public class ServerChildThread extends java.lang.Thread
     {
       while (getSocket().isConnected())
       {
-        while (getReader().ready())
+        if (getReader().ready())
         {
           inputLine = getReader().readLine();
           c = Command.deserialize(inputLine);
@@ -132,7 +132,7 @@ public class ServerChildThread extends java.lang.Thread
 
   private boolean sendCommand(Command command)
   {
-    getWriter().write(Command.serialize(command));
+    getWriter().println(Command.serialize(command));
     return true;
   }
 
